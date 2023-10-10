@@ -1,8 +1,7 @@
 // IssueCard.tsx
 import React from 'react';
-import { Issue } from './Issue';
 
-const IssueCard: React.FC<{ issue: Issue }> = ({ issue }) => (
+const IssueCard = ({ issue }) => (
     <div key={issue.id} className="max-w-sm rounded overflow-hidden shadow-lg">
         <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">

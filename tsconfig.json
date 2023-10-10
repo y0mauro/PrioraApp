@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Navigation.jsx", "app/components/Questions.jsx", "app/components/QuestionContainer.jsx", "app/components/Logo.jsx", "app/components/RangeQuestion.jsx", "app/page.jsx", "app/layout.jsx", "app/issues/IssueCard.jsx", "app/issues/page.jsx"],
   "exclude": ["node_modules"]
 }
