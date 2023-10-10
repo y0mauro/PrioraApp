@@ -22,17 +22,23 @@ const NavigationButtons = ({ currentQuestionIndex, setCurrentQuestionIndex, ques
 
     return (
         <div className="flex justify-between">
-            {currentQuestionIndex > 0 && (
-                <button className="btn btn-active btn-accent my-[5rem] " onClick={handlePreviousQuestion}>
-                    Back
-                </button>
-            )}
-            {currentQuestionIndex < questionsLength - 1 ? (
-                <button className="btn btn-active btn-accent my-[5rem] float-right" onClick={handleNextQuestion}>
+            {currentQuestionIndex > 0 ? (
+                <>
+                    <button className="btn btn-active btn-accent my-[5rem]" onClick={handlePreviousQuestion}>
+                        Back
+                    </button>
+                    {currentQuestionIndex < questionsLength - 1 ? (
+                        <button className="btn btn-active btn-accent my-[5rem]" onClick={handleNextQuestion}>
+                            Next
+                        </button>
+                    ) : (
+                        <button className='btn btn-secondary '>Submit result</button>
+                    )}
+                </>
+            ) : (
+                <button className="btn btn-active btn-accent my-[5rem] ml-auto" onClick={handleNextQuestion}>
                     Next
                 </button>
-            ) : (
-                <button className='btn btn-secondary '>Submit result</button>
             )}
         </div>
     );
